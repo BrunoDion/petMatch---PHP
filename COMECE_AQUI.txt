@@ -1,0 +1,27 @@
+PETMATCH LAB — GUIA RAPIDO (WINDOWS)
+===================================
+
+1) Abra o Ollama, e no PowerShell execute:
+       ollama pull embeddinggemma
+       ollama pull gemma3:1b
+
+2) Confirme que o PostgreSQL local esta ligado e que o banco
+   configurado possui o schema petmatch. Se precisar, crie
+   o banco e execute database/01_criar_base_petmatch.sql.
+
+3) No PHP, habilite extension=pdo_pgsql e extension=curl no php.ini.
+   Confira com: php -m
+
+4) Copie .env.example para .env e preencha a senha e o nome
+   do banco local.
+
+5) Clique em INICIAR_WINDOWS.bat, ou execute:
+       php -S 127.0.0.1:8000 -t public
+
+6) Abra: http://127.0.0.1:8000
+
+7) Entre em LABORATORIO > GERAR EMBEDDINGS.
+   Depois teste BUSCA SEMANTICA e CHAT COM RAG.
+
+DETALHES, TESTES E SOLUCAO DE ERROS:
+LEIA_PRIMEIRO.md
